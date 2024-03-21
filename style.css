@@ -356,9 +356,6 @@ h4.title{
   .programs .program-table th:nth-child(3){
     min-width: 350px;
   }
-  .programs{
-    margin-top: 32px;
-  }
   .herobanner, .electionbus{
     height: 100%;
   }
@@ -372,6 +369,14 @@ h4.title{
 }
 
 @media screen and (max-width: 450px){
+  h2{
+    font-size: 1.7rem;
+  }
+  .electionbus{
+    margin-top: 32px;
+    min-height: 100%;
+  }
+
   img{
     max-width: 320px;
   }
