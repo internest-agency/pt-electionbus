@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrub: true,
       pin: true,
       start: "center center",
-      end: "+=1500",
+      end: "+=800",
       ease: "power1.inOut",
       onUpdate: (self) => {
         startAnimation(self);
