@@ -1,0 +1,307 @@
+*{
+  margin:unset;
+  padding: unset;
+  box-sizing: border-box;
+}
+
+:root{
+  --brand-color: #521010;
+  --yellow-color: #dd9f18;
+  --green-color: #4fc62e;
+  --font-color: #222831;
+  --table-border: #e9e9e9;
+  --onbrand-color: #ffffff;
+  --support-color: #65647C;
+  --social-color: #000000;
+  --section-border: #FACA4380;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-size: 100%;
+  line-height: 1.75;
+  font-family: "Noto Sans Tamil", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+  'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: var(--onbrand-color);
+  background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
+}
+
+section{
+  border-bottom: 1px solid var(--section-border);
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.journey,
+.programs,
+.sponsors,
+.footer{
+  padding: 64px 0;
+}
+
+h2{
+  font-size: 3.2rem;
+  line-height: 1.1;
+  font-weight: 700;
+  -webkit-text-fill-color: var(--brand-color);
+  -webkit-text-stroke-color: var(--social-color);
+  -webkit-text-stroke: 1px;
+}
+
+/* -------- 1. Header Section ---------- */
+.header{
+  display: flex;
+  justify-content: end;
+  padding: 16px;
+}
+.language-selector{
+  position: relative;
+}
+.selected-language{
+  color: var(--onbrand-color);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+.options-list{
+  display: none;
+  border: 1px solid var(--table-border);
+  background-color: var(--onbrand-color);
+  position: absolute;
+  z-index: 3;
+}
+.options-list.active{
+  display: block;
+}
+.option{
+  padding: 4px 16px;
+  cursor: pointer;
+  color: var(--brand-color);
+}
+.option:hover{
+  background-color: var(--brand-color);
+  color: var(--onbrand-color);
+}
+.option:first-child{
+  border-bottom: 1px solid var(--table-border);
+}
+
+
+.english, .tamil{
+  display: none;
+}
+
+.english.active, .tamil.active{
+  display: block;
+}
+
+/* --------- 1. Hero Section --------------*/
+.herobanner{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.republic img{
+  width: 100%;
+  height: auto;
+}
+.hero-content img{
+  width: 100%;
+  height: auto;
+}
+/* --------- 2. Journey Section --------------*/
+.animated-area{
+  background: transparent;
+}
+
+.journey{
+  display: flex;
+  align-items: center;
+}
+
+.journey-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  gap: 16px;
+}
+
+.day-book{
+  width: 100%;
+}
+
+.content-container.english, .content-container.tamil{
+  display: none;
+}
+
+.content-container.english.active,
+.content-container.tamil.active
+ {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.map{
+  display: none;
+}
+
+.map.active{
+  display: block;
+}
+
+
+.busjourney tbody tr{
+  position: absolute;
+  opacity: 0;
+}
+.busjourney th, .busjourney td{
+  text-align: left !important;
+}
+
+.busjourney tbody tr.active{
+  position: static;
+  opacity: 1;
+}
+
+.busjourney table{
+  width: 100%;
+}
+.busjourney th:first-child, .busjourney td:first-child{
+  width: 25%;
+}
+
+.col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.day{
+  margin-bottom: 8px;
+  color: var(--support-color);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+
+.map{
+  width: 90%;
+  height: auto;
+}
+
+.travelled-bus{
+  max-height: 350px;
+  height: 100%;
+}
+
+/* --------- 3. Programs Section --------------*/
+.section-title{
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Table */
+.program-table{
+  width: 100%;
+}
+table.program-table,
+.program-table th,
+.program-table td{
+  border: 1px solid var(--table-border);
+  border-collapse: collapse;
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.program-table thead{
+  background-color: var(--brand-color);
+  color: var(--onbrand-color);
+  line-height: 1.3;
+}
+
+.program-table th,
+.program-table td:first-child{
+  text-wrap: nowrap;
+}
+
+.program-table th{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.program-table td:first-child{
+  text-align: center;
+}
+
+/* --------- 4. Sponsors Section --------------*/
+
+.sponsors-container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sponsors-container .group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.sponsors-container img{
+  width: auto;
+  height: 100px;
+}
+
+.sponsor, .title{
+  text-align: center;
+}
+
+h4.title{
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* --------- 4. Sponsors Section --------------*/
+
+.footer-container, .social-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-container{
+  margin-top: 24px;
+}
+
+.corporations img{
+  width: auto;
+  height: 60px;
+}
+
+.social a{
+  color: var(--onbrand-color);
+  text-decoration: none;
+  font-size: 18px;
+}
