@@ -50,9 +50,7 @@ h2{
   font-size: 3.2rem;
   line-height: 1.1;
   font-weight: 700;
-  -webkit-text-fill-color: var(--brand-color);
-  -webkit-text-stroke-color: var(--golden-border) !important;
-  -webkit-text-stroke: 1px;
+  color: var(--golden-border);
 }
 
 /* -------- 1. Header Section ---------- */
@@ -286,6 +284,7 @@ table.program-table,
 h4.title{
   text-align: center;
   margin-bottom: 16px;
+  font-size: 1.5rem;
 }
 
 /* --------- 4. Sponsors Section --------------*/
@@ -318,7 +317,7 @@ h4.title{
   body{
     font-size: 80%;
   }
-  .journey, .programs, .sponsors, .footer{
+  .herobanner, .journey, .programs, .sponsors, .footer{
     padding: 32px 12px;
   }
   .table-responsive{
@@ -328,7 +327,8 @@ h4.title{
     font-size: 2rem;
   }
   .hero-container{
-    direction: flex;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
   }
   .journey-container {
@@ -342,5 +342,20 @@ h4.title{
   .programs{
     margin-top: 32px;
   }
+  .herobanner{
+    height: 100%;
+  }
+  .sponsors-container img{
+    height: 60px;
+  }
+  h4.title{
+    font-size: 1.2rem;
+  }
 
+}
+
+@media screen and (max-width: 450px){
+  img{
+    max-width: 320px;
+  }
 }
