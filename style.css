@@ -327,7 +327,11 @@ h4.title{
   h2{
     font-size: 2rem;
   }
-  .hero-container, .journey-container {
+  .hero-container{
+    direction: flex;
+    gap: 16px;
+  }
+  .journey-container {
     display: flex;
     flex-direction: column-reverse;
     gap: 16px;
