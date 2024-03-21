@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrub: true,
       pin: true,
       start: "center center",
-      end: "+=200",
+      end: "+=500",
       ease: "power1.inOut",
       onUpdate: (self) => {
         startAnimation(self);
@@ -127,4 +127,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       }
     });
   }
+
+  const hero = gsap.from(".republic", { x: -100, duration: 1 });
 });
