@@ -40,6 +40,7 @@ section{
 }
 
 .journey,
+.electionbus,
 .programs,
 .sponsors,
 .footer{
@@ -215,6 +216,19 @@ h2{
   height: 100%;
 }
 
+/* 2a. Election Bus Section */
+.electionbus{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.bus-container img{
+  max-width: 720px;
+  width: 100%;
+}
+
 /* --------- 3. Programs Section --------------*/
 .section-title{
   text-align: center;
@@ -357,5 +371,9 @@ h4.title{
 @media screen and (max-width: 450px){
   img{
     max-width: 320px;
+  }
+  .bus-container img{
+    max-width: 320px;
+    height: auto;
   }
 }
