@@ -350,6 +350,9 @@ h4.title{
     flex-direction: column-reverse;
     gap: 16px;
   }
+  .program .program-table th:not(:first-child){
+    min-width: 250px;
+  }
   .programs .program-table th:nth-child(3){
     min-width: 350px;
   }
