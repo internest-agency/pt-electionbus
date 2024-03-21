@@ -324,5 +324,13 @@ h4.title{
   .table-responsive{
     overflow-x: scroll;
   }
+  h2{
+    font-size: 2rem;
+  }
+  .hero-container, .journey-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
 
 }
