@@ -21,9 +21,12 @@ function activateLanguage() {
 
   const languages = document.querySelectorAll(".language-select");
   languages.forEach((item) => {
-    if (item.classList.contains("active")) {
+    if (
+      item.classList.contains("active") &&
+      !item.classList.contains(`${lang}`)
+    ) {
       item.classList.remove("active");
-    } else if (item.classList.contains(lang)) {
+    } else {
       item.classList.add("active");
     }
   });
@@ -77,8 +80,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       engMin = 21;
       engMax = 30;
     }
-    console.log(curEnglish);
-
     if (curTamil > 0 && curTamil <= 10) {
       tamilMin = 0;
       tamilMax = 10;
@@ -89,11 +90,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       tamilMin = 20;
       tamilMax = 30;
     }
-    console.log(curTamil);
-    console.log(`Tamil Minimum is ${tamilMin}`);
-    console.log(`Tamil Maximum is ${tamilMax}`);
-    console.log(`English Minimum is ${engMin}`);
-    console.log(`English Maximum is ${engMax}`);
 
     $(".english .busjourney tbody tr").each(function (index, element) {
       if (index + 1 >= engMin && index + 1 <= engMax) {
