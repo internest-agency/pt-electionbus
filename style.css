@@ -335,5 +335,8 @@ h4.title{
   .programs .program-table th:nth-child(3){
     min-width: 350px;
   }
+  .programs{
+    margin-top: 32px;
+  }
 
 }
