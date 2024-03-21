@@ -226,7 +226,6 @@ h2{
 /* Table */
 .table-responsive{
   width: 100%;
-  overflow-x: scroll;
 }
 .program-table{
   width: 100%;
@@ -322,4 +321,8 @@ h4.title{
   .hero-container, .journey-container{
     grid-template-columns: 1fr;
   }
+  .table-responsive{
+    overflow-x: scroll;
+  }
+
 }
