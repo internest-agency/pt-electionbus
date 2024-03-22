@@ -134,4 +134,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scrollTrigger: ".electionbus",
     y: 200,
   });
+  gsap.from(".sponsor", {
+    scrollTrigger: ".group",
+    y: 200,
+  });
 });
