@@ -222,6 +222,7 @@ h2{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 26px;
   min-height: 100vh;
 }
 .bus-container img{
