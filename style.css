@@ -472,4 +472,14 @@ h4.title{
   .herobanner .mobile.active{
     display: block;
   }
+  .press-release{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .press-release a{
+    color: white;
+    text-decoration: unset;
+  }
 }
