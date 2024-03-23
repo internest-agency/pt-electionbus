@@ -185,6 +185,14 @@ h2{
   font-size: 18px;
 }
 
+.press-release a{
+  color: white;
+  text-decoration: unset;
+}
+.press-release a:hover{
+  text-decoration: underline;
+}
+
 .press-release .media{
   font-style: italic;
 }
