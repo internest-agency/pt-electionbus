@@ -43,6 +43,7 @@ body{
 .journey,
 .electionbus,
 .playlists,
+.press,
 .programs,
 .sponsors,
 .footer{
@@ -62,7 +63,10 @@ h2{
   display: flex;
   justify-content: space-between;
   padding: 8px 16px;
-  background-color: var(--brand-color)
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .language-selector{
@@ -70,7 +74,7 @@ h2{
 }
 
 .selected-language{
-  color: var(--onbrand-color);
+  color: var(--brand-color);
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -112,17 +116,6 @@ h2{
   display: block;
 }
 
-.press-release{
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.press-release a{
-  color: white;
-  text-decoration: unset;
-}
-
 /* --------- 1. Hero Section --------------*/
 .herobanner img{
   min-width: 100%;
@@ -157,12 +150,19 @@ h2{
 }
 
 /* --------- 2. Journey Section --------------*/
-.playlists{
+.playlists,
+.press,
+.press-col{
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.playlist-container{
+.press-col{
+  align-items: center;;
+}
+
+.playlist-container,
+.press-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
@@ -173,6 +173,19 @@ h2{
   justify-content: center;
   align-items: center;
   gap: 16px;
+}
+.press-col img{
+  width: 100%;
+}
+
+.press-release .title{
+  color: white;
+  text-decoration: unset;
+  font-size: 18px;
+}
+
+.press-release .media{
+  font-style: italic;
 }
 
 .playlist-title a, .about-title{
@@ -397,6 +410,7 @@ h4.title{
   .about,
   .journey,
   .playlists,
+  .press,
   .programs,
   .sponsors,
   .footer{
@@ -409,7 +423,8 @@ h4.title{
     font-size: 2rem;
   }
   .hero-container,
-  .playlist-container{
+  .playlist-container,
+  .press-container{
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -456,10 +471,16 @@ h4.title{
     height: auto;
   }
 
-  .playlist-container{
+  .playlist-container,
+  .press-container{
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+
+  .press-container img{
+    width: 100%;
   }
 
   .video-playlist{
@@ -471,16 +492,6 @@ h4.title{
   }
   .herobanner .mobile.active{
     display: block;
-  }
-  .press-release{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .press-release a{
-    color: white;
-    text-decoration: unset;
   }
   .selected-language{
     font-size: 80%;
