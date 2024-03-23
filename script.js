@@ -41,8 +41,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
       trigger: ".animated-area",
       scrub: true,
       pin: true,
+      snap: {
+        snapTo: "labels", // snap to the closest label in the timeline
+        duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+        delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+        ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+      },
       start: "center center",
-      end: "+=200",
+      end: "+=1000",
       ease: "power1.inOut",
       onUpdate: (self) => {
         startAnimation(self);
@@ -128,10 +134,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
-  gsap.from(".bus-image", {
-    scrollTrigger: ".electionbus",
-    y: 200,
-  });
   gsap.from(".sponsor", {
     scrollTrigger: ".group",
     y: 200,
