@@ -482,4 +482,8 @@ h4.title{
     color: white;
     text-decoration: unset;
   }
+  .selected-language{
+    font-size: 80%;
+    font-weight: 400;
+  }
 }
