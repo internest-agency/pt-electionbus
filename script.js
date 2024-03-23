@@ -128,8 +128,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
-  const hero = gsap.from(".republic", { x: -100, duration: 1 });
-
   gsap.from(".bus-image", {
     scrollTrigger: ".electionbus",
     y: 200,

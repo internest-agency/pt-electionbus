@@ -30,10 +30,6 @@ body{
   background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
 }
 
-section{
-  border-bottom: 1px solid var(--section-border);
-}
-
 .container{
   max-width: 1200px;
   margin: 0 auto;
@@ -41,6 +37,7 @@ section{
 
 .journey,
 .electionbus,
+.playlists,
 .programs,
 .sponsors,
 .footer{
@@ -59,12 +56,16 @@ h2{
   display: flex;
   justify-content: end;
   padding: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 .language-selector{
   position: relative;
 }
 .selected-language{
-  color: var(--onbrand-color);
+  color: var(--brand-color);
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -102,32 +103,25 @@ h2{
 }
 
 /* --------- 1. Hero Section --------------*/
-.herobanner{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.herobanner img{
+  width: 100%;
+  height: auto;
 }
-.hero-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 16px;
-}
-
 .republic img{
   width: 100%;
   height: auto;
 }
-.hero-content img{
-  width: 100%;
-  height: auto;
+.col.hero-content{
+  justify-content: flex-start;
+  flex-wrap: nowrap;
 }
-/* --------- 2. Journey Section --------------*/
-.animated-area{
-  background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
+.content-text{
+  min-width: 100%;
+  transition: all 1s ease-in;
 }
 
+
+/* --------- 2. Journey Section --------------*/
 .journey{
   display: flex;
   flex-wrap: wrap;
@@ -229,6 +223,8 @@ h2{
   max-width: 720px;
   width: 100%;
 }
+
+
 
 /* --------- 3. Programs Section --------------*/
 .section-title{
@@ -332,7 +328,11 @@ h4.title{
   body{
     font-size: 80%;
   }
-  .herobanner, .journey, .programs, .sponsors, .footer{
+  .journey,
+  .playlists,
+  .programs,
+  .sponsors,
+  .footer{
     padding: 32px 12px;
   }
   .table-responsive{
@@ -357,7 +357,7 @@ h4.title{
   .programs .program-table th:nth-child(3){
     min-width: 350px;
   }
-  .herobanner, .electionbus{
+  .electionbus{
     height: 100%;
   }
   .sponsors-container img{
