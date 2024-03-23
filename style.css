@@ -47,7 +47,7 @@ body{
 .sponsors,
 .footer{
   padding: 64px 0;
-  border-bottom: 1px solid var(--golden-border);
+  border-bottom: 1px solid var(--section-border);
 }
 
 h2{
@@ -117,8 +117,12 @@ h2{
 
 /* --------- 1. Hero Section --------------*/
 .herobanner img{
+  min-width: 100%;
   width: 100%;
   height: auto;
+}
+.herobanner .mobile{
+  display: none;
 }
 .republic img{
   width: 100%;
@@ -432,7 +436,9 @@ h4.title{
     margin-top: 32px;
     min-height: 100%;
   }
-
+  .about-title{
+    margin-bottom: 12px;
+  }
   img{
     max-width: 320px;
   }
@@ -450,5 +456,11 @@ h4.title{
   .video-playlist{
     width: 320px;
     height: calc((320px * 9 / 16));
+  }
+  .herobanner .desktop{
+    display: none;
+  }
+  .herobanner .mobile.active{
+    display: block;
   }
 }
