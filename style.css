@@ -435,4 +435,15 @@ h4.title{
     max-width: 320px;
     height: auto;
   }
+
+  .playlist-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .video-playlist{
+    width: 350px;
+    height: calc((350px * 9 / 16));
+  }
 }
