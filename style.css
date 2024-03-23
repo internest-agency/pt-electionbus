@@ -30,11 +30,16 @@ body{
   background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
 }
 
+.animated-area{
+  background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
+}
+
 .container{
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.about,
 .journey,
 .electionbus,
 .playlists,
@@ -42,6 +47,7 @@ body{
 .sponsors,
 .footer{
   padding: 64px 0;
+  border-bottom: 1px solid var(--golden-border);
 }
 
 h2{
@@ -61,15 +67,18 @@ h2{
   left: 0;
   z-index: 1;
 }
+
 .language-selector{
   position: relative;
 }
+
 .selected-language{
   color: var(--brand-color);
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
 }
+
 .options-list{
   display: none;
   border: 1px solid var(--table-border);
@@ -77,18 +86,22 @@ h2{
   position: absolute;
   z-index: 3;
 }
+
 .options-list.active{
   display: block;
 }
+
 .option{
   padding: 4px 16px;
   cursor: pointer;
   color: var(--brand-color);
 }
+
 .option:hover{
   background-color: var(--brand-color);
   color: var(--onbrand-color);
 }
+
 .option:first-child{
   border-bottom: 1px solid var(--table-border);
 }
@@ -118,6 +131,43 @@ h2{
 .content-text{
   min-width: 100%;
   transition: all 1s ease-in;
+}
+
+/* --------- 2. Journey Section --------------*/
+.about p:not(:last-child){
+  margin-bottom: 16px;
+}
+.text-content{
+  text-align: justify;
+}
+/* --------- 2. Journey Section --------------*/
+.playlists{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.playlist-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.video{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.playlist-title a, .about-title{
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.video-playlist{
+  width: 560px;
+  height: calc((560px * 9 / 16));
 }
 
 
