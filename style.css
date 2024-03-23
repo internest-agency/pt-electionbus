@@ -443,7 +443,7 @@ h4.title{
   }
 
   .video-playlist{
-    width: 350px;
-    height: calc((350px * 9 / 16));
+    width: 320px;
+    height: calc((320px * 9 / 16));
   }
 }
