@@ -60,12 +60,9 @@ h2{
 /* -------- 1. Header Section ---------- */
 .header{
   display: flex;
-  justify-content: end;
-  padding: 16px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: var(--brand-color)
 }
 
 .language-selector{
@@ -73,7 +70,7 @@ h2{
 }
 
 .selected-language{
-  color: var(--brand-color);
+  color: var(--onbrand-color);
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -113,6 +110,17 @@ h2{
 
 .english.active, .tamil.active{
   display: block;
+}
+
+.press-release{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.press-release a{
+  color: white;
+  text-decoration: unset;
 }
 
 /* --------- 1. Hero Section --------------*/
@@ -382,7 +390,7 @@ h4.title{
 }
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1080px) {
   body{
     font-size: 80%;
   }
@@ -400,7 +408,8 @@ h4.title{
   h2{
     font-size: 2rem;
   }
-  .hero-container{
+  .hero-container,
+  .playlist-container{
     display: flex;
     flex-direction: column;
     gap: 16px;
