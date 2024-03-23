@@ -137,9 +137,13 @@ h2{
 .about p:not(:last-child){
   margin-bottom: 16px;
 }
+.about-title{
+  margin-bottom: 24px;
+}
 .text-content{
   text-align: justify;
 }
+
 /* --------- 2. Journey Section --------------*/
 .playlists{
   display: flex;
