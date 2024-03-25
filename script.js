@@ -36,9 +36,9 @@ function activateLanguage() {
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger, Observer, CustomEase);
   // gsap code here!
-  var animation = gsap.timeline({
+  gsap.timeline({
     scrollTrigger: {
-      trigger: ".animated-area",
+      trigger: ".day-book",
       scrub: true,
       pin: true,
       snap: {
@@ -48,15 +48,35 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
       },
       start: "center center",
-      end: "+=1000",
+      end: "+=200",
       ease: "power1.inOut",
       onUpdate: (self) => {
-        startAnimation(self);
+        startTableAnimation(self);
       },
     },
   });
 
-  function startAnimation(self) {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: ".travel-map",
+      scrub: true,
+      pin: true,
+      snap: {
+        snapTo: "labels", // snap to the closest label in the timeline
+        duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
+        delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
+        ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
+      },
+      start: "center center",
+      end: "+=200",
+      ease: "power1.inOut",
+      onUpdate: (self) => {
+        startMapAnimation(self);
+      },
+    },
+  });
+
+  function startTableAnimation(self) {
     const progress = Math.floor(self.progress * 100);
     const engLen = $(".english .busjourney tbody tr").length;
     const tamilLen = $(".tamil .busjourney tbody tr").length;
@@ -69,12 +89,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       Math.round((progress * tamilLen) / 100) <= 1
         ? 1
         : Math.round((progress * tamilLen) / 100);
-
-    const curMap =
-      Math.round((progress * MapLen) / 100) <= 1
-        ? 1
-        : Math.round((progress * MapLen) / 100);
-    let engMin, engMax, tamilMin, tamilMax;
 
     if (curEnglish > 0 && curEnglish <= 10) {
       engMin = 0;
@@ -120,6 +134,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
       }
     });
+  }
+
+  function startMapAnimation(self) {
+    const progress = Math.floor(self.progress * 100);
+    const MapLen = $(".map").length;
+
+    const curMap =
+      Math.round((progress * MapLen) / 100) <= 1
+        ? 1
+        : Math.round((progress * MapLen) / 100);
 
     $(".map").each(function (index, element) {
       if (index + 1 == curMap) {
@@ -144,7 +168,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const [x, xEnd] =
       index % 2
         ? ["100%", ((w.scrollWidth - section.offsetWidth) / 1.2) * -1]
-        : [(w.scrollWidth / 1.2) * -1, 0];
+        : [0, (w.scrollWidth / 1.2) * -1];
     gsap.fromTo(
       w,
       { x },
