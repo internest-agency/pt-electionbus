@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scrollTrigger: {
       trigger: ".travel-map",
       scrub: true,
-      pin: true,
+      pin: false,
       snap: {
         snapTo: "labels", // snap to the closest label in the timeline
         duration: { min: 0.2, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
