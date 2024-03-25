@@ -167,8 +167,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const w = section.querySelector(".program-gallery");
     const [x, xEnd] =
       index % 2
-        ? ["100%", ((w.scrollWidth - section.offsetWidth) / 1.2) * -1]
-        : [0, (w.scrollWidth / 1.2) * -1];
+        ? ["100%", (w.scrollWidth - section.offsetWidth) * -1]
+        : [0, w.scrollWidth * -1];
     gsap.fromTo(
       w,
       { x },
