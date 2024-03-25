@@ -219,6 +219,7 @@ h2{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
 }
 
 .journey-container{
