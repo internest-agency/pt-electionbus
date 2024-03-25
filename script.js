@@ -138,4 +138,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
     scrollTrigger: ".group",
     y: 200,
   });
+
+  gsap.utils.toArray(".programs").forEach((section, index) => {
+    const w = section.querySelector(".program-gallery");
+    const [x, xEnd] =
+      index % 2
+        ? ["100%", ((w.scrollWidth - section.offsetWidth) / 1.2) * -1]
+        : [(w.scrollWidth / 1.2) * -1, 0];
+    gsap.fromTo(
+      w,
+      { x },
+      {
+        x: xEnd,
+        scrollTrigger: {
+          trigger: section,
+          pin: true,
+          scrub: 0.5,
+        },
+      }
+    );
+  });
 });

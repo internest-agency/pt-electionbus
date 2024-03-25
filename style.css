@@ -208,6 +208,11 @@ h2{
   height: calc((560px * 9 / 16));
 }
 
+.teaser-video{
+  width: 980px;
+  height: calc((980px * 9 / 16));
+}
+
 
 /* --------- 2. Journey Section --------------*/
 .journey{
@@ -312,6 +317,20 @@ h2{
   width: 100%;
 }
 
+/* --------- 3. Programs Gallery --------------*/
+.programs{
+  overflow: hidden;
+}
+.program-gallery{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 16px;
+}
+.image-container img{
+  width: 720px;
+  height: auto;
+}
 
 
 /* --------- 3. Programs Section --------------*/
