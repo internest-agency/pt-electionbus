@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ease: "power1.inOut", // the ease of the snap animation ("power3" by default)
       },
       start: "center center",
-      end: "+=200",
+      end: "+=500",
       ease: "power1.inOut",
       onUpdate: (self) => {
         startTableAnimation(self);
