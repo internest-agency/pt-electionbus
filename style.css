@@ -478,6 +478,11 @@ h4.title{
     font-size: 1.2rem;
   }
 
+  .teaser-video{
+    width: 640px;
+    height: calc((640px * 9 / 16));
+  }
+
 }
 
 @media screen and (max-width: 450px){
@@ -511,7 +516,7 @@ h4.title{
     width: 100%;
   }
 
-  .video-playlist{
+  .video-playlist, .teaser-video{
     width: 320px;
     height: calc((320px * 9 / 16));
   }
