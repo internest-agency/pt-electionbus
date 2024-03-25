@@ -30,9 +30,6 @@ body{
   background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
 }
 
-.animated-area{
-  background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
-}
 
 .container{
   max-width: 1200px;
@@ -219,13 +216,11 @@ h2{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: radial-gradient(69.77% 80.23% at 49.95% 49.93%, #951719 0%, #330B0A 100%);
 }
 
 .journey-container{
   display: grid;
   grid-template-columns: 50% 50%;
-  align-items: center;
   gap: 16px;
 }
 
@@ -256,18 +251,13 @@ h2{
   display: block;
 }
 
-
-.busjourney tbody tr{
-  position: absolute;
-  opacity: 0;
+.travel-map img{
+  position: sticky;
+  top: 0;
 }
+
 .busjourney th, .busjourney td{
   text-align: left !important;
-}
-
-.busjourney tbody tr.active{
-  position: static;
-  opacity: 1;
 }
 
 .busjourney table{
@@ -292,7 +282,6 @@ h2{
   font-weight: 600;
   line-height: 1;
 }
-
 
 .map{
   width: 90%;
@@ -323,13 +312,12 @@ h2{
   overflow: hidden;
 }
 .program-gallery{
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
 }
 .image-container img{
-  width: 720px;
+  width: 100%;
   height: auto;
 }
 
@@ -510,6 +498,10 @@ h4.title{
     display: grid;
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+  .program-gallery{
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
 
