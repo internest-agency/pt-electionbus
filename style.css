@@ -45,7 +45,7 @@ body{
 .gallery,
 .sponsors,
 .footer{
-  padding: 64px 0;
+  padding: 64px 8px;
   border-bottom: 1px solid var(--section-border);
 }
 
@@ -344,12 +344,14 @@ h2{
   right: 16px;
   top: 50%;
   cursor: pointer;
+  font-size: 26px;
 }
 .arrow-left{
   position: absolute;
   left: 16px;
   top: 50%;
   cursor: pointer;
+  font-size: 26px;
 }
 
 .globe-container .image-container{
