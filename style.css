@@ -42,6 +42,7 @@ body{
 .playlists,
 .press,
 .programs,
+.gallery,
 .sponsors,
 .footer{
   padding: 64px 0;
@@ -321,6 +322,57 @@ h2{
   height: auto;
 }
 
+/* --------- 4. Ceremony Section -------------- */
+.ceremony{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+}
+.ceremony-box{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* --------- 360 View ------------ */
+.globe-parent{
+  position: relative;
+}
+.arrow-right{
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  cursor: pointer;
+}
+.arrow-left{
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  cursor: pointer;
+}
+
+.globe-container .image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.globe-container .image-container img{
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.globe-container .image-container.active{
+  display: block;
+}
+
+.globe-container .image-container{
+  display: none;
+}
+
 
 /* --------- 3. Programs Section --------------*/
 .section-title{
@@ -487,12 +539,14 @@ h4.title{
   .about-title{
     margin-bottom: 12px;
   }
-  img{
-    max-width: 320px;
-  }
+  
   .bus-container img{
     max-width: 320px;
     height: auto;
+  }
+
+  .ceremony{
+    grid-template-columns: 1fr;
   }
 
   .sponsors-container .group{
